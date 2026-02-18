@@ -1,0 +1,2 @@
+ccxt
+sqlalchemy>=2.0
