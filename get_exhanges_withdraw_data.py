@@ -242,10 +242,10 @@ if __name__ == "__main__":
         # ccxtpro.bitmart(),  # api url blocked by ISP
         ccxtpro.bybit({'apiKey': os.getenv('BYBIT_KEY'), 'secret': os.getenv('BYBIT_SECRET')}),  # type: ignore
         # ccxtpro.gate({'apiKey': os.getenv('GATE_KEY'), 'secret': os.getenv('GATE_SECRET')}),  # type: ignore  # api url blocked by ISP
+        # ccxtpro.htx({'apiKey': os.getenv('HTX_KEY'), 'secret': os.getenv('HTX_SECRET')}),  # type: ignore  # api url blocked by ISP
         ccxtpro.kucoin(),
         ccxtpro.mexc({'apiKey': os.getenv('MEXC_KEY'), 'secret': os.getenv('MEXC_SECRET')}),  # type: ignore
         ccxtpro.okx({'apiKey': os.getenv('OKX_KEY'), 'secret': os.getenv('OKX_SECRET'), 'password': os.getenv('OKX_PASSWORD')}),  # type: ignore
-        # ccxtpro.htx({'apiKey': os.getenv('HTX_KEY'), 'secret': os.getenv('HTX_SECRET')}),  # type: ignore  # api url blocked by ISP
     ]
     print(f"[INFO] Download from exchanges...")
     exchanges_loaded = asyncio.run(get_exchanges(exchanges))
